@@ -1,0 +1,157 @@
+.search-error,
+.search-no-results {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.search-error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.search-no-results {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.search-results {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.results-header {
+  background: #f5f5f5;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.result-item {
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item:hover {
+  background-color: #f9f9f9;
+}
+
+.result-artwork {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.result-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-details {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.result-artist {
+  color: #646cff;
+}
+
+.result-genre,
+.result-kind {
+  color: #888;
+  font-style: italic;
+}
+
+.result-price {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+.loading-more,
+.no-more-results {
+  padding: 1.5rem;
+  text-align: center;
+  list-style: none;
+}
+
+.loading-spinner {
+  color: #646cff;
+  font-weight: 500;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.no-more-results {
+  color: #888;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .search-results {
+    border-color: #333;
+  }
+
+  .results-header {
+    background: #2a2a2a;
+    color: #ccc;
+    border-bottom-color: #333;
+  }
+
+  .result-item {
+    border-bottom-color: #333;
+  }
+
+  .result-item:hover {
+    background-color: #2a2a2a;
+  }
+
+  .result-name {
+    color: #fff;
+  }
+}
+
